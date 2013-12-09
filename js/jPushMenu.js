@@ -16,23 +16,15 @@
 		$('body').addClass(o.bodyClass);
 		$(this).addClass('jPushMenuBtn');
 		$(this).click(function() {
-			var target         = '',
+			var target         = '#'+$(this).data( "slidemenu" );,
 			push_direction     = '';
 			
 		
 			if($(this).is('.'+o.showLeftClass)) {
-				target         = '.cbp-spmenu-left';
 				push_direction = 'toright';
 			}
 			else if($(this).is('.'+o.showRightClass)) {
-				target         = '.cbp-spmenu-right';
 				push_direction = 'toleft';
-			}
-			else if($(this).is('.'+o.showTopClass)) {
-				target         = '.cbp-spmenu-top';
-			}
-			else if($(this).is('.'+o.showBottomClass)) {
-				target         = '.cbp-spmenu-bottom';
 			}
 			
 
